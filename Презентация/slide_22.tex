@@ -1,0 +1,22 @@
+\begin{frame}[fragile]{Проблема с UTF-8}
+    \hypersetup{pdfpagetransition={Box /D 2 /M /O}}
+    
+    Сообщения об ошибках исчезнут, если указать в настройках $\backslash$lstset использование не-ASCII символов:
+    
+    \begin{tcolorbox}
+        \linespread{1}
+        \begin{verbatim}
+            
+            \lstset{extendedchars=\true}
+        \end{verbatim}
+    \end{tcolorbox}
+    
+    \lstset{extendedchars=\true}
+    
+    \textbf{Важно:} именно \textit{$\backslash$true}, а не \textit{true}, как указано, например, на \href{http://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings}{
+        \underline{\textit{Wikibooks}}
+    }.
+    
+    Однако при этом остаётся проблема с русскоязычными комментариями, в которых слова оказываются склеены. Окончательно решает эту проблему следующий пакет.
+    
+\end{frame}

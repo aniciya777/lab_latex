@@ -1,0 +1,32 @@
+\chapter{Название первой главы}%%Раздел
+\section{Название параграфа}%%Подраздел
+Ссылка на литературу \cite{kniga}. А тут на две книги \cite{something,kniga}.
+
+Здесь ссылка на рисунок \ref{risk}. А тут на таблицу \ref{tab} и таблицу \ref{tab1} из приложения.
+\begin{figure}[ht]
+	\centering
+		\includegraphics[width=.90\textwidth]{risk.jpeg}
+	\caption{Риск}
+	\label{risk}
+\end{figure}
+
+\begin{table}[h]
+	\begin{center}
+		\begin{tabular}{|c|c|}\hline
+		A&B\\\hline C&D	\\\hline
+		\end{tabular}
+	\end{center}
+	\caption{таблица}
+	\label{tab}
+\end{table}
+
+\section{Название второго параграфа}%%Раздел
+\begin{theorem}
+Пусть \(\left(\Omega,\calA{},\BP\right)\)~--- вероятностное пространство.
+Тогда для любых несовместных \(A,B\in\calA{}\): \begin{equation}\BP(A\sqcup B)=\BP(A)+\BP(B).\label{add}\end{equation}
+\label{th}
+\end{theorem}
+\begin{proof}{}
+Равенство \eqref{add} следует из $\sigma$-аддитивности меры \(\BP\). Теорема \ref{th} доказана.
+\end{proof}
+

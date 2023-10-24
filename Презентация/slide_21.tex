@@ -1,0 +1,18 @@
+\begin{frame}[fragile]{Проблема с UTF-8}
+    \hypersetup{pdfpagetransition={Box /D 2 /M /O}}
+    
+    При попытке вставить в код текст на кириллице (не в комментарий, а именно в код --- текст должен был выводиться в графическом окне) будет получено сообщение об ошибке вида:
+    
+    \begin{tcolorbox}
+        \linespread{1}
+        \begin{verbatim}
+            
+Package inputenc Error: Unicode char \u8:
+?\lst@FillFixed@ not set up for use
+        \end{verbatim}
+    \end{tcolorbox}
+    
+    При этом кодировка основного документа --- \textit{UTF-8}, что указано в преамбуле.
+    
+
+\end{frame}

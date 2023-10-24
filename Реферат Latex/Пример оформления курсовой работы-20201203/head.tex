@@ -1,0 +1,114 @@
+\usepackage{cmap}		
+\usepackage[T2A]{fontenc}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+\frenchspacing						%% надстройка для красивой верстки
+
+\usepackage{textcomp}
+\usepackage{amssymb, amsmath} % Американское математичесое общество
+\usepackage{amsfonts,latexsym,amsthm}
+\usepackage{indentfirst}
+\usepackage{bm} % жирный шрифт
+\usepackage{xspace} % специальный пробел
+\usepackage{floatflt, subfigure, epsfig} % Обтекание рисунков текстом wrapfig
+\parindent=1.5cm
+\usepackage{extsizes} % Возможность сделать 14-й шрифт
+\usepackage{geometry} % Простой способ задавать поля
+\usepackage{calrsfs}%красивые калиграфические буквы в формулах используя \mathcal
+\usepackage{mathrsfs}%красивые  буквы в формулах используя \mathscr
+
+\geometry{top=20mm}
+\geometry{bottom=25mm}
+\geometry{left=30mm}
+\geometry{right=15mm}
+\renewcommand{\baselinestretch}{1.25}
+\clubpenalty=10000
+\widowpenalty=10000
+\unitlength=1mm
+\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+%\renewcommand{\contentsname}{Содержание}
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}
+\makeatletter
+
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \hbox to\textwidth{\hfill\parbox{0.8\textwidth}{\begin{center}#1. #2\end{center}}\hfill}
+  \vskip\belowcaptionskip}
+
+\renewcommand{\l@chapter}[2]%
+{\pagebreak[3]\vspace{1em plus 1pt}%
+   \@tempdima=1.5em % место для номера главы
+   {% Дальнейшее происходит внутри группы...
+     \rightskip=\@pnumwidth % см. ниже
+     \leftskip=\@tempdima
+     \noindent\bfseries % установить жирный шрифт
+     \hspace{-\leftskip}Глава #1\nolinebreak
+     \leaders\hbox to .75em{\hss.\hss}
+     \hfill%
+     \rlap{\makebox[\@pnumwidth][r]{#2}}\par
+     \nopagebreak[3]%
+   }% конец этой группы
+}% конец определения
+
+\renewcommand{\tableofcontents}{\section*{Содержание}\@starttoc{toc}}
+\renewenvironment{thebibliography}[1]
+     {\section*{Литература}%
+      \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+
+\renewcommand{\@makechapterhead}[1]{% Начало макроопределения
+  \vspace*{5pt}% Пустое место вверху страницы.
+  {\parindent=0pt
+   \raggedright \normalfont\Large\bfseries
+   Глава{} %\@chapapp{} % \@chapapp печатает слово "Глава" (см. ниже)
+    \thechapter \par % номер главы - в отдельной строке
+    \vspace{10pt} % между словом "Глава" и ее заголовком
+    \normalfont\Large\bfseries #1\par % заголовок главы
+    \nopagebreak     % чтоб не оторвать заголовок от текста
+    \vspace{20 pt}   % между заголовком и текстом
+  }% конец группы.
+}% конец макроопределения.
+\newcommand{\l@vved}[2]%
+{\pagebreak[3]\vspace{1em plus 1pt}%
+\@tempdima=1em%
+{%
+  \rightskip=\@pnumwidth %
+  \leftskip=\@tempdima %
+  \bfseries %
+  \noindent %
+  \hspace{-\leftskip}%
+  #1\nolinebreak\leaders\hbox to .75em{\hss.\hss}
+  \hfill%
+  \rlap{\makebox[\@pnumwidth][r]{#2}}\em\par
+  \nopagebreak[3]}%
+}
+%%Окружения теорем, лемм, определений, доказательств и т.п.
+\newcommand{\BR}{\ensuremath{\mathbb R}\xspace}
+\newcommand{\calA}[1]{\ensuremath{{\mathcal A\,}_{#1}\xspace}}
+\newcommand{\BP}{\ensuremath{\mathsf P}}
+\newtheorem{theorem}{Теорема}
+
+%%% Работа с таблицами
+\usepackage{tabularx,array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
+\usepackage{supertabular, multicol, hhline}
+\usepackage{longtable}  % Длинные таблицы
+\usepackage{multirow} % Слияние строк в таблице
+\columnsep=0cm
+\usepackage{rotating} % Rotating table
+\usepackage{verbatim}

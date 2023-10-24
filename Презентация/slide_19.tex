@@ -1,0 +1,53 @@
+\begin{frame}[fragile]{Настройка конфигурации пакета listings}
+    \hypersetup{pdfpagetransition={Box /D 2 /M /O}}
+    
+    \definecolor{dkgreen}{rgb}{0,0.6,0}
+    \definecolor{gray}{rgb}{0.5,0.5,0.5}
+    \definecolor{mauve}{rgb}{0.58,0,0.82}
+    
+    \lstset{ %
+        language=Python, 				% выбор языка для подсветки (здесь это С)
+        numbers=left,                   % С какой стороны нумеровать
+        numberstyle=\tiny\color{gray}, 	% Стиль который будет использоваться для нумерации строк
+        stepnumber=2,                   % Шаг между линиями. Если 1, то будет пронумерована каждая строка 
+        numbersep=5pt,                  
+        backgroundcolor=\color{white}, 	% Цвет подложки
+        showspaces=false,               
+        showstringspaces=false,         
+        showtabs=false,                
+        frame=single,                   % Добавить рамку
+        rulecolor=\color{black},        
+        tabsize=2,                      % Tab - 2 пробела
+        breaklines=true,                % Автоматический перенос строк
+        breakatwhitespace=true,         % Переносить строки по словам
+        title=\lstname,                 % Показать название подгружаемого файла
+        keywordstyle=\color{blue},      % Стиль ключевых слов
+        commentstyle=\color{dkgreen},   % Стиль комментариев
+        stringstyle=\color{mauve}       % Стиль литералов
+    }
+    
+    Вы также можете указать область для файла:
+    
+    \begin{tcolorbox}
+        \linespread{1}
+        \begin{verbatim}
+            
+        \lstinputlisting[language=Python,
+    firstline=37, lastline=45]{source_filename.py}
+        \end{verbatim}
+    \end{tcolorbox}
+
+    \begin{center}
+        или
+    \end{center}
+    
+    \begin{tcolorbox}
+        \linespread{1}
+        \begin{verbatim}
+                
+        \lstinputlisting[language=Python,
+    linerange={37-45,48-50}]{source_filename.py}
+        \end{verbatim}
+    \end{tcolorbox}
+        
+\end{frame}

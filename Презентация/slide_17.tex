@@ -1,0 +1,21 @@
+\begin{frame}[fragile]{Настройка конфигурации пакета listings}
+    \hypersetup{pdfpagetransition={Box /D 2 /M /O}}
+    
+    \begin{tcolorbox}
+        \linespread{1}
+        \begin{verbatim}
+    ...
+    % Переносить строки по словам
+        breakatwhitespace=true,
+    % Показать название подгружаемого файла
+        title=\lstname,
+    % Стиль ключевых слов
+        keywordstyle=\color{blue},
+    % Стиль комментариев
+        commentstyle=\color{dkgreen},
+    % Стиль литералов
+        stringstyle=\color{mauve}
+    }\end{verbatim}
+    \end{tcolorbox}
+
+\end{frame}

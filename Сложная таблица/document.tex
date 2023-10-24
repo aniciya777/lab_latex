@@ -1,0 +1,44 @@
+\documentclass[a4paper,14pt]{extreport}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{hhline}
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+\usepackage{array}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+
+\begin{document}
+	
+	\begin{table}
+		
+		\begin{tabular}{|m{0.5cm}||m{4.5cm}|m{4cm} c|c|c|m{1.7cm}|}\hline
+			\multicolumn{7}{|c|}{} \\
+			\multicolumn{7}{|c|}{\large\bf Декабрь} \\ \hline
+			\rotatebox{90}{Недели } & \multicolumn{1}{c|}{Область} & \multicolumn{2}{c|}{Задание} & {\checkmark} & $\times$ & \rotatebox{45}{Подпись} \\ \hline
+			
+			\multirow{8}{*}{\rotatebox{90}{2 неделя 14-20}} & {Математика} & {Я Профессионал} & & & & \\ \cline{2-6}
+			& {Машинное обучение} & {{Я Профессионал}} & & & & \\ \cline{2-6}
+			& {Программная инженерия} & {Я Профессионал} & & & & \\ \cline{2-6}
+			& {Информационная безопасность} & {Я Профессионал} & & & & \\ \cline{2-6}
+			& {Искусственный интеллект} & {Я Профессионал} & & & & \\ \cline{2-6}
+			& {Математическое моделирование} & {Я Профессионал} & & & & \\ \cline{2-6}
+			& {Программирование} & {Я Профессионал} & & & & \\ \cline{2-6}
+			& {Дизайн} & {Я Профессионал} & & & & \\ \hline
+			
+			\multirow{7}{*}{\rotatebox{90}{3 неделя 21-27}} & {Математика} & {Я Профессионал} & & & & \\ \cline{2-6}
+			& {Программная инженерия} & {Я Профессионал} & & & & \\ \cline{2-6}
+			& {Информационная безопасность} & {Я Профессионал} & & & & \\ \cline{2-6}
+			& {Искусственный интеллект} & {Я Профессионал} & & & & \\ \cline{2-6}
+			& {Работа} & {Бот} & & & & \\ \cline{2-6}
+			& {Работа} & {Проверка лаб} & & & & \\ \cline{2-6}
+			& {Работа} & {Провести урок} & & & & \\ \cline{2-6}
+			\hline
+		\end{tabular}
+	
+	\end{table}
+	
+\end{document}

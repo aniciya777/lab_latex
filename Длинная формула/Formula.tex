@@ -1,0 +1,58 @@
+\documentclass[a4paper,14pt]{extreport}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{amssymb, amsmath}
+\usepackage{theorem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\definecolor{linkcolor}{HTML}{000000}
+\definecolor{urlcolor}{HTML}{0645AD}
+\hypersetup{pdfstartview=FitH,  linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
+
+
+\begin{document}
+	
+	\begin{center}
+		\Large
+		\textbf{Линейная регрессия}
+	\end{center}
+
+	Линейная регрессия — метод восстановления зависимости между двумя переменными. Линейная означает, что мы предполагаем, что переменные выражаются через уравнение вида:
+	
+	\begin{equation}
+		y = ax + b + \varepsilon.
+		\label{o} 
+	\end{equation}
+
+	Эпсилон в формуле \eqref{o} — это ошибка модели. 
+	
+	\begin{center}
+		\Large
+		\textbf{Метод наименьших квадратов}
+	\end{center}
+
+	Суть МНК заключается в том, чтобы отыскать такие параметры $\Theta$, чтобы предсказанное значение было наиболее близким к реальному. Математически это выглядит так:
+	
+	\begin{equation}
+		\sum\limits_{i=0}^n(y_i - \hat{y_i})^2 \longrightarrow \min\limits_{\Theta}.
+		\label{m} 
+	\end{equation}
+
+	  Требуется найти такой вектор $\Theta$ \eqref{m}, при котором выражение:
+	  
+	  \begin{equation}
+	  	\sum\limits_{i=0}^n(y_i - f(x_i, \Theta))^2,
+	  \end{equation}
+	  достигает минимума.
+	  
+	  Длинные преобразования из статьи. Демонстрация многострочной формулы:
+	
+	  \begin{multline}
+	  	(Y-A\Theta)^T(Y-A\Theta) =\\
+	  	= Y^TY-(A\Theta)^TY-Y^TA\Theta+(A\Theta)^TA\Theta.
+	  \end{multline}
+	  
+	  А вот ссылка на статью \href{https://habr.com/ru/post/307004/}{https://habr.com/ru/post/307004/}.
+	  
+\end{document}

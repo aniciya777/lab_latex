@@ -1,0 +1,27 @@
+\documentclass[a4paper,14pt]{extreport}
+\usepackage[cp1251]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{tikz}
+\usepackage{lmodern}
+\begin{document}
+\begin{tikzpicture}
+	\draw[thick] (11, -6) -- (0, 0) -- (7.5, 10) -- (12, 2) -- (11, -6) -- (7.5, 10) -- (11 / 2, -6 / 2);
+	\node[below left, font=\fontsize{30}{0}] at (11 / 2, -6 / 2) {$N$};
+	\node[below left, font=\fontsize{30}{0}] at (0,0) {$A$};
+	\node[below right, font=\fontsize{30}{0}] at (11, -6) {$D$};
+	\node[above, font=\fontsize{30}{0}] at (7.5, 10) {$S$};
+	\node[above right, font=\fontsize{30}{0}] at (12, 2) {$C$};
+	\draw[dashed, thick] (12, 2) -- (- 11 * 0.45 + 12, - -6 * 0.45 + 2) -- (7.5, 10);
+	\node[above left, font=\fontsize{30}{0}] at (- 11 * 0.45 + 12, - -6 * 0.45 + 2) {$B$};
+	\draw[dashed, thick] (- 11 * 0.45 + 12, - -6 * 0.45 + 2) -- (0, 0);
+	\draw[dashed, thick] (11 / 2, -6 / 2) -- (12 - 11 / 4, 2 + 6 / 4) -- (7.5, 10);
+	\node[below right, font=\fontsize{30}{0}] at (12 - 11 / 4, 2 + 6 / 4) {$L$};
+	\draw[dashed, thick] (11 / 2 + 3 / 2 + 0.5, 2 - 6 / 4) -- (7.5, 10);
+	\node[below, font=\fontsize{30}{0}] at (11 / 2 + 3 / 2 + 0.5, 2 - 6 / 4) {$O$};
+	\draw[dashed, thick] (11 / 2 + 3 / 2 + 0.5, 2 - 6 / 4) -- (12 * 0.7 + 11 * 0.3, 2 * 0.7 - 6 * 0.3);
+	\node[right, font=\fontsize{30}{0}] at (12 * 0.7 + 11 * 0.3, 2 * 0.7 - 6 * 0.3) {$M$};
+	\draw[thick] (7.5, 10) -- (12 * 0.7 + 11 * 0.3, 2 * 0.7 - 6 * 0.3);
+	\draw[dashed, thick] (11 / 2 + 3 / 2 + 0.5, 2 - 6 / 4) -- (- 11 * 0.45 * 0.7 + 12 * 0.7, 6 * 0.45 * 0.7 + 2 * 0.7) -- (7.5, 10);
+	\node[above left, font=\fontsize{30}{0}] at (- 11 * 0.45 * 0.7 + 12 * 0.7, 6 * 0.45 * 0.7 + 2 * 0.7) {$K$};
+\end{tikzpicture}
+\end{document} 

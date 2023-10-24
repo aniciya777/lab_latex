@@ -1,0 +1,22 @@
+\begin{frame}[fragile]{Работа с пакетом listings}
+    \hypersetup{pdfpagetransition={Box /D 2 /M /O}}
+    
+    Например, следующий \LaTeX-код позволит вставить код поиска максимального элемента массива $A$ на языке \textit{С++}:
+    
+    \begin{tcolorbox}
+        \linespread{1}
+        \begin{verbatim}
+            
+            \begin{lstlisting}
+                max = A[0];
+                i_max = 0;
+                for(i = 1; i < n; i++)
+                    if (A[i] > max) 
+                    {
+                        max = A[i];
+                        i_max = i;
+                    }
+            \end{lstlisting}\end{verbatim}
+    \end{tcolorbox}
+    
+\end{frame}

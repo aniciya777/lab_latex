@@ -1,0 +1,25 @@
+\begin{frame}[fragile]{Настройка конфигурации пакета listings}
+    \hypersetup{pdfpagetransition={Box /D 2 /M /O}}
+    
+    \begin{tcolorbox}
+        \linespread{1}
+        \begin{verbatim}
+    ...
+    % Цвет подложки. Вы должны добавить
+    % пакет color - \usepackage{color}
+        backgroundcolor=\color{white},
+        showspaces=false,
+        showstringspaces=false,
+        showtabs=false,
+    % Добавить рамку
+        frame=single,
+        rulecolor=\color{black},
+    % Tab - 2 пробела
+        tabsize=2,
+    % Автоматический перенос строк
+        breaklines=true,
+    ...
+}\end{verbatim}
+    \end{tcolorbox}
+    
+\end{frame}

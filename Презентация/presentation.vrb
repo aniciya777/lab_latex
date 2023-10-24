@@ -1,0 +1,13 @@
+\frametitle{Пакет minted}
+\hypersetup{pdfpagetransition={Box /D 2 /M /O}}
+
+    \textbf{minted} --- альтернатива ставшему популярным пакету \textbf{listings}. Он использует внешнюю библиотеку \textit{Python~Pygments} для выделения кода, которая по состоянию на 2021~год может похвастаться более чем 500~поддерживаемыми языками и текстовыми форматами.
+
+    Поскольку пакет полагается на внешний код \textit{Python}, для его установки требуется больше дополнительных шагов, чем для обычного пакета \LaTeX, поэтому, пожалуйста, ознакомьтесь с его
+    \href{https://github.com/gpoore/minted}{
+        \underline{\textit{репозиторием на GitHub}}
+    } и
+    \href{https://github.com/gpoore/minted/blob/master/source/minted.pdf}{
+        \underline{\textit{руководством}}
+    }.
+
